@@ -46,6 +46,7 @@
         sm-coding-python
         sm-coding-ruby
         ;; sm-coding-swift
+        sm-coding-perl
         sm-coding-web))
 
 (defun sm/load-modules ()
