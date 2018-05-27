@@ -7,7 +7,7 @@
 (defvar sm/fixed-font-weight 'normal)
 ;;(defvar sm/var-font-name "SF UI Text")
 (defvar sm/var-font-name "SF Pro Text")
-(defvar sm/font-height 140)
+(defvar sm/font-height 130)
 
 ;; Native line numbers and fringe setup.
 (setq-default display-line-number-width 4)
@@ -32,8 +32,8 @@
             (set-face-attribute
              'variable-pitch nil
              :family sm/var-font-name))
-          (use-package darkokai-theme
-            :config (load-theme 'darkokai t)))
+          (use-package heroku-theme
+            :config (load-theme 'heroku t)))
 
 (use-package rainbow-mode
   :straight (rainbow-mode :type git :host github :repo "emacsmirror/rainbow-mode")
