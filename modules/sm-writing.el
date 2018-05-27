@@ -1,10 +1,3 @@
-;; typo
-;; Mode for typographical editing.
-(use-package typo
-  :commands typo-mode
-  :config (setq-default typo-language "English")
-  :init (add-hook 'text-mode-hook #'typo-mode))
-
 ;; flyspell spell checking.
 (use-package flyspell
   :delight flyspell-mode
@@ -22,8 +15,5 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :config (add-hook 'markdown-mode-hook (lambda () (setq display-line-numbers t))))
-
-;; Double spaces at the end of sentences is a bit outdated.
-(setq sentence-end-double-space nil)
 
 (provide 'sm-writing)
