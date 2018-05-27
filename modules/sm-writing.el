@@ -16,4 +16,7 @@
          ("\\.markdown\\'" . markdown-mode))
   :config (add-hook 'markdown-mode-hook (lambda () (setq display-line-numbers t))))
 
+;; lorem ipsum, generate fun text
+(use-package lorem-ipsum)
+
 (provide 'sm-writing)
