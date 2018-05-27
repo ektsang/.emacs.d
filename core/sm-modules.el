@@ -49,6 +49,7 @@
         sm-coding-perl
         sm-coding-sh
         sm-coding-stats
+        sm-dired
         sm-coding-web))
 
 (defun sm/load-modules ()
