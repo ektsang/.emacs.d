@@ -1,7 +1,9 @@
 ;; ag (silver surfer)
 (use-package ag
   :bind ("C-c s" . ag)
-  :config (setq ag-highlight-search t))
+  :config
+  (setq ag-highlight-search t)
+  (setq ag-reuse-buffers t))
 
 ;; anzu
 ;; Shows isearch results in mode-line and better query-replace.
