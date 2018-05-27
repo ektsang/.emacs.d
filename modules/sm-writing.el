@@ -8,6 +8,9 @@
   (setq flyspell-issue-message-flag nil)
   (setq flyspell-issue-welcome-flag nil))
 
+;; lorem ipsum, generate fun text
+(use-package lorem-ipsum)
+
 ;; markdown
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
@@ -16,7 +19,10 @@
          ("\\.markdown\\'" . markdown-mode))
   :config (add-hook 'markdown-mode-hook (lambda () (setq display-line-numbers t))))
 
-;; lorem ipsum, generate fun text
-(use-package lorem-ipsum)
+(use-package markdownfmt
+  :config
+  (progn
+    ;; (add-hook 'markdown-mode-hook #'markdownfmt-enable-on-save)
+    ))
 
 (provide 'sm-writing)
