@@ -9,9 +9,8 @@
 (defvar sm/var-font-name "SF Pro Text")
 (defvar sm/font-height 130)
 
-;; Native line numbers and fringe setup.
+;; Native line numbers (unused until 26.x, no harm done....)
 (setq-default display-line-number-width 4)
-(set-fringe-style 0)
 
 (add-hook 'emacs-startup-hook ;; 'window-setup-hook
           (lambda nil

@@ -1,9 +1,5 @@
 ;;; sm-source-control.el --- Source control and related configuration.
 
-;; Disable since I use magit for everything.
-(setq vc-handled-backends '())
-(remove-hook 'find-file-hooks 'vc-find-file-hook)
-
 ;; gist.el
 ;; Provides ability to create github gists from region, file, etc., as well as
 ;; browse, edit, and update metadata of your gists.
@@ -45,14 +41,13 @@ git or hg repository is found in the buffer-local working dir."
                                        (setq git-commit-summary-max-length 50))))
   (add-hook 'magit-mode-hook #'turn-on-magit-gh-pulls))
 
-;; git-gutter
-(use-package git-gutter
-  :straight git-gutter-fringe
-  :defer 2
-  :delight git-gutter-mode
-  :config
-  (require 'git-gutter-fringe)
-  (setq git-gutter:handled-backends '(git hg))
-  (global-git-gutter-mode t))
+;; highlight file differences (fringe, dired)
+(use-package diff-hl
+  :init
+  (progn
+    (global-diff-hl-mode)
+    (unless (display-graphic-p)
+      (diff-hl-margin-mode))
+    (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
 (provide 'sm-source-control)
