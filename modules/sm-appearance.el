@@ -31,8 +31,14 @@
             (set-face-attribute
              'variable-pitch nil
              :family sm/var-font-name))
-          (use-package heroku-theme
-            :config (load-theme 'heroku t)))
+          (if (display-graphic-p)
+              ;; previous theme
+              ;; (use-package heroku-theme
+              ;;   :config (load-theme 'heroku t))
+              (load-theme 'wombat t)
+            ;; dark theme, very contrasty.
+            ;; (load-theme 'manoj-dark t)))
+            (load-theme 'wombat t)))
 
 (use-package rainbow-mode
   :straight (rainbow-mode :type git :host github :repo "emacsmirror/rainbow-mode")
