@@ -3,9 +3,10 @@
 ;; Disable cursor display in inactive windows.
 (setq-default cursor-in-non-selected-windows nil)
 
-(defvar sm/fixed-font-name "Office Code Pro D")
-(defvar sm/fixed-font-weight 'light)
-(defvar sm/var-font-name "SF UI Text")
+(defvar sm/fixed-font-name "Inconsolata LGC")
+(defvar sm/fixed-font-weight 'normal)
+;;(defvar sm/var-font-name "SF UI Text")
+(defvar sm/var-font-name "SF Pro Text")
 (defvar sm/font-height 140)
 
 ;; Native line numbers and fringe setup.
@@ -23,11 +24,12 @@
              :family sm/fixed-font-name
              :height sm/font-height
              :weight sm/fixed-font-weight)
-            (set-face-attribute
-             'line-number nil
-             :family sm/fixed-font-name
-             :height (- sm/font-height 10)
-             :weight sm/fixed-font-weight)
+            ;; this is part of the native line numbers in v26
+            ;; (set-face-attribute
+            ;;  'line-number nil
+            ;;  :family sm/fixed-font-name
+            ;;  :height (- sm/font-height 10)
+            ;;  :weight sm/fixed-font-weight)
             (set-face-attribute
              'variable-pitch nil
              :family sm/var-font-name))
