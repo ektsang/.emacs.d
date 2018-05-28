@@ -32,12 +32,12 @@
              'variable-pitch nil
              :family sm/var-font-name))
           (if (display-graphic-p)
-              ;; previous theme
-              ;; (use-package heroku-theme
-              ;;   :config (load-theme 'heroku t))
-              (load-theme 'wombat t)
+              ;; (load-theme 'wombat t)
+              (use-package heroku-theme
+                :config (load-theme 'heroku t))
             ;; dark theme, very contrasty.
             ;; (load-theme 'manoj-dark t)))
+            ;; (load-theme 'tsdh-dark t)))
             (load-theme 'wombat t)))
 
 (use-package rainbow-mode
