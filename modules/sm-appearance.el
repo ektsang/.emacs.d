@@ -12,6 +12,9 @@
 ;; Native line numbers (unused until 26.x, no harm done....)
 (setq-default display-line-number-width 4)
 
+(use-package heroku-theme)
+(use-package base16-theme)              ; for screwing around
+
 (add-hook 'emacs-startup-hook ;; 'window-setup-hook
           (lambda nil
             (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -33,12 +36,12 @@
              :family sm/var-font-name))
           (if (display-graphic-p)
               ;; (load-theme 'wombat t)
-              (use-package heroku-theme
-                :config (load-theme 'heroku t))
+              (load-theme 'heroku t)
             ;; dark theme, very contrasty.
-            ;; (load-theme 'manoj-dark t)))
-            ;; (load-theme 'tsdh-dark t)))
-            (load-theme 'wombat t)))
+            ;; (load-theme 'manoj-dark t)
+            ;; (load-theme 'tsdh-dark t)
+            (load-theme 'wombat t)
+            ))
 
 (use-package rainbow-mode
   :straight (rainbow-mode :type git :host github :repo "emacsmirror/rainbow-mode")
