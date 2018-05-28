@@ -53,3 +53,4 @@ ensime/
 *.pyc
 
 network-security.data
+etc/.mc-lists.el
