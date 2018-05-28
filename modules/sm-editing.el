@@ -90,10 +90,24 @@
 
 ;; multiple-cursors
 (use-package multiple-cursors
-  :init (setq mc/list-file (sm/emacs.d "etc/.mc-lists.el"))
-  :bind (("C->" . mc/mark-next-like-this)
-         ("C-<" . mc/mark-previous-like-this)
-         ("C-c C->" . mc/mark-all-like-this)))
+  :init
+  (setq mc/list-file (sm/emacs.d "etc/.mc-lists.el"))
+  (define-prefix-command 'endless/mc-map)
+  ;;from here: http://endlessparentheses.com/multiple-cursors-keybinds.html
+  :bind (()                             ; encourage emacs to indent pretty...
+         :map ctl-x-map
+         ("m" . endless/mc-map)
+         :map endless/mc-map
+         ("\C-a" . mc/edit-beginnings-of-lines)
+         ("\C-e" . mc/edit-ends-of-lines)
+         ("<" . mc/mark-previous-like-this)
+         ("<" . mc/mark-previous-like-this)
+         (">" . mc/mark-next-like-this)
+         ("a" . mc/mark-all-like-this)
+         ("h" . mc/hide-unmatched-lines-mode)
+         ("i" . mc/insert-numbers)
+         ("l" . mc/edit-lines)
+         ))
 
 ;; expand-region
 (use-package expand-region
