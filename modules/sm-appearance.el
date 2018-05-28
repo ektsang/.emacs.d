@@ -7,7 +7,7 @@
 (defvar sm/fixed-font-weight 'normal)
 ;;(defvar sm/var-font-name "SF UI Text")
 (defvar sm/var-font-name "SF Pro Text")
-(defvar sm/font-height 130)
+(defvar sm/font-height 120)
 
 ;; Native line numbers (unused until 26.x, no harm done....)
 (setq-default display-line-number-width 4)
