@@ -1,6 +1,7 @@
 ;;; sm-coding-java.el --- Java and Android config.
 
 (use-package ensime
+  :straight (:repo "https://github.com/ensime/ensime-emacs" :branch "2.0")
   :commands java-mode)
 
 (use-package java
