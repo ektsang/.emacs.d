@@ -52,6 +52,7 @@
         sm-coding-stats
         sm-dired
         sm-mail
+        sm-data
         ))
 
 (defun sm/load-modules ()

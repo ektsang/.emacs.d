@@ -72,6 +72,4 @@
 ;;   (use-package flycheck-ycmd
 ;;     :config (flycheck-ycmd-setup)))
 
-(use-package yaml-mode)
-
 (provide 'sm-coding-general)
