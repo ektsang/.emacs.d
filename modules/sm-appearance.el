@@ -9,7 +9,6 @@
 (defvar sm/var-font-name "SF Pro Text")
 (defvar sm/font-height 120)
 
-;; Native line numbers (unused until 26.x, no harm done....)
 (setq-default display-line-number-width 4)
 
 (use-package heroku-theme)
@@ -29,12 +28,11 @@
              :family sm/fixed-font-name
              :height sm/font-height
              :weight sm/fixed-font-weight)
-            ;; this is part of the native line numbers in v26
-            ;; (set-face-attribute
-            ;;  'line-number nil
-            ;;  :family sm/fixed-font-name
-            ;;  :height (- sm/font-height 10)
-            ;;  :weight sm/fixed-font-weight)
+            (set-face-attribute
+             'line-number nil
+             :family sm/fixed-font-name
+             :height (- sm/font-height 10)
+             :weight sm/fixed-font-weight)
             (set-face-attribute
              'variable-pitch nil
              :family sm/var-font-name))

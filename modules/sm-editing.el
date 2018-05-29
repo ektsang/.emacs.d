@@ -21,12 +21,7 @@
   :config
   (global-auto-revert-mode t))
 
-;; Native line numbers won't work until 26.x.  In the meantime, use linum
-;; (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers t)))
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (linum-mode +1)
-            (setq linum-format " %4d ")))
+(add-hook 'prog-mode-hook (lambda () (setq display-line-numbers t)))
 
 ;; Don't use tabs for indent; replace tabs with two spaces.
 (setq-default tab-width 2)
