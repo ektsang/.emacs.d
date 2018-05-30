@@ -25,7 +25,9 @@
   :straight (delight :type git :host github :repo "emacsmirror/delight"))
 
 (setq sm/modules
-      '(sm-path
+      '(
+        sm-keybindings
+        sm-path
         sm-editing
         sm-ui
         sm-appearance

@@ -89,7 +89,8 @@
   (setq mc/list-file (sm/emacs.d "etc/.mc-lists.el"))
   (define-prefix-command 'endless/mc-map)
   ;;from here: http://endlessparentheses.com/multiple-cursors-keybinds.html
-  :bind (()                             ; encourage emacs to indent pretty...
+  :bind ((("C-<" . mc/mark-previous-like-this)
+          ("C->" . mc/mark-next-like-this))
          :map ctl-x-map
          ("m" . endless/mc-map)
          :map endless/mc-map
