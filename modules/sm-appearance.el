@@ -13,7 +13,9 @@
 
 (use-package heroku-theme)
 (use-package base16-theme)              ; for screwing around
-(use-package doom-themes)
+;; https://github.com/hlissner/emacs-doom-themes/issues/166
+(use-package doom-themes               ; for screwing around
+  :preface (defvar region-fg nil))
 
 (add-hook 'emacs-startup-hook ;; 'window-setup-hook
           (lambda nil
