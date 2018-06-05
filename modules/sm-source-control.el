@@ -41,6 +41,8 @@ git or hg repository is found in the buffer-local working dir."
                                        (setq git-commit-summary-max-length 50))))
   (add-hook 'magit-mode-hook #'turn-on-magit-gh-pulls))
 
+(use-package git-commit)
+
 ;; highlight file differences (fringe, dired)
 (use-package diff-hl
   :init
