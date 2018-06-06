@@ -36,8 +36,8 @@
              'variable-pitch nil
              :family sm/var-font-name))
           (if (display-graphic-p)
-              ;; (load-theme 'wombat t)
-              (load-theme 'heroku t)
+               (load-theme 'wombat t)
+              ;; (load-theme 'heroku t)
             ;; dark theme, very contrasty.
             ;; (load-theme 'manoj-dark t)
             ;; (load-theme 'tsdh-dark t)
