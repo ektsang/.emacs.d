@@ -156,7 +156,8 @@
 ;; subword
 (use-package subword
   :delight subword-mode
-  :init (global-subword-mode))
+  ;; :init (global-subword-mode)
+  (add-hook 'prog-mode-hook 'subword-mode))
 
 ;; undo-tree
 ;; Treat undo history as a tree.
