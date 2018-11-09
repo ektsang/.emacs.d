@@ -57,6 +57,7 @@
         sm-dired
         sm-mail
         sm-data
+        sm-terraform
         ))
 
 (defun sm/load-modules ()
