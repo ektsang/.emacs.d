@@ -17,8 +17,13 @@
 (setq straight-check-for-modifications 'live)
 
 ;; Use `use-package' via straight.el
+;; See raxod502/straight.el issue #330
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
+;; this will only work if code that loads vm fixes its use of defun* w/ a
+;; (require 'cl)...
+(setq use-package-always-defer t)
+
 
 ;; Install delight as required by `:delight' with use-package.
 (use-package delight
