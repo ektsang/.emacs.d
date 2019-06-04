@@ -1,5 +1,9 @@
 ;;; sm-modules.el --- Configures available modules and the package manager.
 
+;; straight.el tuning
+(setq straight-cache-autoloads t)
+(setq straight-check-for-modifications 'live)
+
 ;; Bootstrap straight.
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -13,10 +17,6 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
-
-;; straight.el tuning
-(setq straight-cache-autoloads t)
-(setq straight-check-for-modifications 'live)
 
 ;; Use `use-package' via straight.el
 ;; See raxod502/straight.el issue #330
