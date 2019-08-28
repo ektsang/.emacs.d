@@ -55,3 +55,6 @@ ensime/
 
 network-security.data
 etc/.mc-lists.el
+
+# gopls (LSP server) state file
+.lsp-session-v1
