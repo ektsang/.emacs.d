@@ -29,19 +29,26 @@ git or hg repository is found in the buffer-local working dir."
 ;; magit and monky
 ;; Modes for git and mercurial.
 (use-package magit
-  :straight magit-gh-pulls
   :commands magit-status
   :bind ("C-x g" . magit-status)
   :config
+  ;; Remove git from backends that builtin VC mode handles
+  (setq vc-handled-backends (delq 'Git vc-handled-backends))
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
   (add-hook 'git-commit-mode-hook '(lambda ()
                                      (progn
                                        (git-commit-turn-on-flyspell)
                                        (git-commit-turn-on-auto-fill)
                                        (setq git-commit-summary-max-length 50))))
-  (add-hook 'magit-mode-hook #'turn-on-magit-gh-pulls))
+  )
+
+(use-package forge
+  :after magit)
 
 (use-package git-commit)
+
+;; visit previous versions of files
+(use-package git-timemachine)
 
 ;; highlight file differences (fringe, dired)
 (use-package diff-hl

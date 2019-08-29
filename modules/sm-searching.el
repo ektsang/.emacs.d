@@ -5,11 +5,18 @@
   (setq ag-highlight-search t)
   (setq ag-reuse-buffers t))
 
+(use-package rg)
+
 ;; anzu
 ;; Shows isearch results in mode-line and better query-replace.
 (use-package anzu
   :delight anzu-mode
-  :init (global-anzu-mode)
+  :demand                               ; can't defer, want it globally
+  :config
+  (global-anzu-mode t)
+  ;; use anzu's versions of these commands
+  (global-set-key [remap query-replace] 'anzu-query-replace)
+  (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
   :bind (("M-%" . anzu-query-replace)
          ("C-M-%" . anzu-query-replace-regexp)))
 
