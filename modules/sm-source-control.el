@@ -49,6 +49,7 @@ git or hg repository is found in the buffer-local working dir."
   :after magit)
 
 (use-package git-commit)
+(global-git-commit-mode)
 
 ;; visit previous versions of files
 (use-package git-timemachine)
